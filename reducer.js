@@ -7,5 +7,10 @@ module.exports = function reducer (state, action){
   switch (action.type) {
     case 'INIT':
       return newState
+    case 'TOGGLE_GREET':
+      newState.shootGreet = !newState.shootGreet
+      return newState
+    default:
+      return newState
   }
 }
